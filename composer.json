@@ -32,7 +32,7 @@
     ],
     "extra": {
         "installer-paths": {
-            "public/mu-plugins/{$name}/": [
+            "public/muplugins/{$name}/": [
                 "type:wordpress-muplugins"
             ],
             "public/plugins/{$name}/": [
