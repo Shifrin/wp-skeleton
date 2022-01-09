@@ -1,0 +1,8 @@
+# wordpress
+/public/wp
+
+# composer
+/vendor
+
+# config
+/config/config.php
