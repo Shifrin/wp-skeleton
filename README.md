@@ -19,9 +19,11 @@ GitHub Cli:
 
 ### Install
 
-Run composer update
-`composer update`
+Run composer install
+`composer install`
 
 ### Configurations
 
-You can find a `config.php` inside the config folder if not create one from the `config.sample.php`. And add your configurations according to your environment.
+You can find a `config.php` inside the config folder once composer installed finished, if not create one from the `config.sample.php`. And adjust configurations according to your environment.
+
+Make sure `index.php` inside the public folder exists if not copy `index.php` from WordPress directory (`public/wp`) and fix the path of `wp-blog-header.php`.

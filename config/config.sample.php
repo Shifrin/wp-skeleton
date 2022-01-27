@@ -34,15 +34,19 @@ define('NONCE_SALT', '');
  */
 define('WP_DEBUG', false);
 define('WP_DEBUG_DISPLAY', true);
-define('WP_DEBUG_LOG', APP_DIR['root'] . '/logs/wp-errors.php');
+define('WP_DEBUG_LOG', APP_DIR['root'] . '/logs/wp-logs.php');
 
 // URL settings
 define('WP_HOME', '');
 define('WP_SITEURL', '');
 
-// Content settings
-define('WP_CONTENT_DIR', APP_DIR['webroot'] . '/wp/wp-content');
-define('WP_CONTENT_URL', WP_SITEURL . '/wp-content');
+// Content directory
+define('WP_CONTENT_DIR', APP_DIR['webroot'] . '/content');
+define('WP_CONTENT_URL', WP_HOME . '/content');
+
+// Plugin directory
+define('WP_PLUGIN_DIR', APP_DIR['webroot'] . '/plugins');
+define('WP_PLUGIN_URL', WP_HOME . '/plugins');
 
 // Cookie settings
 define('ADMIN_COOKIE_PATH', '/');

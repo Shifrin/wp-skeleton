@@ -21,32 +21,34 @@
     "require": {
         "php": ">=7.4",
         "johnpbloch/wordpress": "~5.0",
-        "composer/installers": "~1.0"
+        "composer/installers": "~1.0",
+        "wpackagist-plugin/akismet": "*"
     },
     "repositories": [
         {
             "type": "composer",
             "url": "https://wpackagist.org",
-            "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
         }
     ],
     "extra": {
         "installer-paths": {
-            "public/muplugins/{$name}/": [
-                "type:wordpress-muplugins"
-            ],
             "public/plugins/{$name}/": [
-                "type:wordpress-plugins"
+                "type:wordpress-plugin"
             ],
             "public/themes/{$name}/": [
-                "type:wordpress-themes"
+                "type:wordpress-theme"
             ]
         },
         "wordpress-install-dir": "public/wp"
     },
     "scripts": {
         "post-install-cmd": [
-            "php -r \"copy(__DIR__ . '/config/config.sample.php', __DIR__ . '/config/config.php');\""
+            "php -r \"copy(__DIR__ . '/config/config.sample.php', __DIR__ . '/config/config.php');\"",
+            "php -r \"copy(__DIR__ . '/public/wp/index.php', __DIR__ . '/public/index.php');\""
         ]
     }
 }

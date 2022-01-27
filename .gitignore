@@ -1,5 +1,8 @@
 # wordpress
 /public/wp
+/public/content
+/public/themes
+/public/plugins
 /public/.htaccess
 
 # composer
